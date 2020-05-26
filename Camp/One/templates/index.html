@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="jumbotron">
+        <p>Welcome to Puppy Rock!</p>
+        <p>Wanna sign up for our puppy band?</p>
+            <a href="{{url_for('signup_form')}}">Sign up here!</a>
+
+
+        <p>Check if your username meets requirements first!</p>
+        <form action="{{url_for('report')}}">
+            <label for="username">Username:</label>
+            <input type="text" name="username">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+{% endblock %}
